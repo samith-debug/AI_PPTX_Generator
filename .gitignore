@@ -1,0 +1,6 @@
+# local config & outputs
+config.json
+generated_ppts/
+images/
+__pycache__/
+*.pyc
