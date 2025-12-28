@@ -1,6 +1,6 @@
 flask
 gunicorn
-pillow
+Pillow
 python-pptx
 requests
 serpapi
