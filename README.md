@@ -1,3 +1,10 @@
+
+## 🔗 Live Demo
+
+[🚀 Open Live App](https://ai-slide-generator.onrender.com)
+
+
+
 AI-Powered PPTX Presentation Generator
 
 Groq + SerpAPI + Unsplash + python-pptx + Tkinter
