@@ -60,44 +60,4 @@ PPT is created automatically and saved
 No manual editing required.
 
  
- ############################## PROJECT STRUCTURE ######################################
-
-
-PPTX-Generator-Groq/
-│
-│── apis/
-│   │── __init__.py
-│   │── base_generation.py
-│   │── groq_api.py
-│
-│── crawlers/
-│   │── __init__.py
-│   │── icrawlercrawler.py
-│   │── serpapi_image.py
-│
-│── generated_ppt/
-│
-│── static_site/
-│   │── assets/
-│   │── favicon.ico
-│   │── index.html
-│   │── placeholder.svg
-│   │── robots.txt
-│
-│── node_modules/        # (for static site preview / UI)
-│── flask/               # deployment-related
-│
-│── config.json
-│── generate_ppt.py
-│── server.py
-│── ui.py
-│── utils.py
-│── theme0.pptx
-│
-│── requirements.txt
-│── Procfile
-│── package.json
-│── package-lock.json
-│── LICENSE
-│── README.md
-│── .gitignore
+ 
