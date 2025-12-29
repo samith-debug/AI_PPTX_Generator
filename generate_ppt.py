@@ -10,17 +10,13 @@ from utils import load_config
 from crawlers.serpapi_image import SerpAPIImageFetcher, UnsplashFallback
 from pptx.enum.text import PP_PARAGRAPH_ALIGNMENT, MSO_VERTICAL_ANCHOR
 
-# ----------------------------------------------------
-# Load theme safely
-# ----------------------------------------------------
+
 def load_theme():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     theme_path = os.path.join(base_dir, "theme0.pptx")
     return Presentation(theme_path)
 
-# ----------------------------------------------------
-# IMAGE VALIDATION + WEBP FIX
-# ----------------------------------------------------
+
 def ensure_pptx_compatible_image(img_path):
     try:
         with Image.open(img_path) as img:
