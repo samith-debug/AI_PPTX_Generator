@@ -6,10 +6,10 @@ class GroqAPIClient(BaseGenerationAPIClient):
     def __init__(self, api_key, model):
         super().__init__(api_key, model)
 
-        # Initialize Groq client
+        
         self.client = Groq(api_key=api_key)
 
-        # List of supported models
+        
         self.default_model = "llama-3.3-70b-versatile"
 
     def generate(self, prompt) -> str:
@@ -20,7 +20,7 @@ class GroqAPIClient(BaseGenerationAPIClient):
 
         model_to_use = self.model or self.default_model
 
-        # Create chat completion request
+        
         response = self.client.chat.completions.create(
             model=model_to_use,
             messages=[
@@ -30,5 +30,5 @@ class GroqAPIClient(BaseGenerationAPIClient):
             temperature=0.4
         )
 
-        # Extract text safely
+        
         return response.choices[0].message.content.strip()

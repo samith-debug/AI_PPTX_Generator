@@ -8,9 +8,7 @@ class SerpAPIImageFetcher:
         self.config = load_config()
         self.api_key = self.config.get("serpapi_key", "")
 
-    # -------------------------
-    # Delete old images
-    # -------------------------
+   
     def clear_folder(self, folder):
         if not os.path.exists(folder):
             return
@@ -21,9 +19,7 @@ class SerpAPIImageFetcher:
             except:
                 pass
 
-    # -------------------------
-    # Call SerpAPI directly
-    # -------------------------
+  
     def fetch_image_result(self, query):
         try:
             url = "https://serpapi.com/search.json"
@@ -53,9 +49,7 @@ class SerpAPIImageFetcher:
 
         return None
 
-    # -------------------------
-    # Download image bytes
-    # -------------------------
+    
     def download_image(self, url):
         try:
             headers = {"User-Agent": "Mozilla/5.0"}
@@ -68,9 +62,7 @@ class SerpAPIImageFetcher:
 
         return None
 
-    # -------------------------
-    # Main function
-    # -------------------------
+    
     def get_image(self, query, save_dir):
         images_dir = os.path.join(save_dir, "images")
         os.makedirs(images_dir, exist_ok=True)
@@ -93,9 +85,7 @@ class SerpAPIImageFetcher:
         return filename
 
 
-# -------------------------------------
-# UNSPLASH FALLBACK (unchanged)
-# -------------------------------------
+
 class UnsplashFallback:
     def get_image(self, query, save_dir):
         return None
