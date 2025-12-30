@@ -69,7 +69,9 @@ def generate():
         topic = data.get("topic")
         groq_key = data.get("groq_api_key")
         serp_key = data.get("serp_api_key")
+
         slides = int(data.get("slides", 7))
+        slides = max(1, min(slides, 15))   # 🔒 limit slides between 1–15
 
         if not topic or not groq_key:
             return jsonify({"error": "Missing topic or API key"}), 400
@@ -102,5 +104,5 @@ def generate():
 
 if __name__ == "__main__":
     # Debug mode only for development
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 5001))
     app.run(host="0.0.0.0", port=port)
